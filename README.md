@@ -50,3 +50,13 @@ To start your server, instead of running directly with node (`node app.js`) use 
 1. GET `/owners` - responds with an array containing the data of every owner (_hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-promise-readdir-method) to read all of the file names in the owners folder_)
 2. GET `/owners/:id` - responds with the relevant owner's data
 
+### Task 2 Getting pets
+
+1. GET `/owners/:id/pets` - responds with an array containing the data of all pets belonging to the relevant owner
+2. GET `/pets` - responds with an array containing all of the pets' data. This endpoint should accept a query of `temperament` so that users can filter pets by their temperament, e.g. `GET /api/pets?temperament=grumpy` responds with an array containing all the pets with a `temperament` of `grumpy`
+
+### Task 3 Updating Owners
+
+_don't forget to use `express.json()` to access the request body! & think about what the endpoint for each of the below should be_
+
+1. PATCH: update an owners name and age.
