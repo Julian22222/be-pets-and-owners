@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/armsheat/be-pets-and-owners#readme",
   "devDependencies": {
-    "jest": "^29.1.1"
+    "jest": "^29.1.1",
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "express": "^4.18.1"
