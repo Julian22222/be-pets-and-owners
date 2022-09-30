@@ -53,12 +53,12 @@ const fetchPets = () => {
 };
 
 const changeOwnerById = (id) => {
-  return fs
-    .readFile(__dirname + `/data/owners/${id}.json`, "utf8")
+  return fs.readFile(__dirname + `/data/owners/${id}.json`, "utf8")
     .then((ownerString) => {
       console.log(ownerString);
       return JSON.parse(ownerString);
     });
+    
   // .then((ownerInfo) => {
   //   console.log(ownerInfo);
   // });

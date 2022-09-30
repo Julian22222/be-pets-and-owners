@@ -6,6 +6,7 @@ const {
   fetchPets,
   changeOwnerById,
 } = require("./models");
+const express = require('express')
 
 const getOwners = (request, response) => {
   fetchOwners()
@@ -60,10 +61,11 @@ const getPets = (request, response) => {
 };
 
 const updatedOwner = (request, response) => {
-  const { id } = request.params;
+   const { id } = request.params;
+  console.log(request.body)
   changeOwnerById(id)
-    .then((parsedPets) => {
-      response.status(200).send({ pets });
+    .then((owner) => {
+      response.status(200).send({ owner });
     })
     .catch((err) => {
       console.log(err);
